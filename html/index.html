@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Blaka+Hollow&family=Bokor&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--tabla principal-->
+    <div class="main-table-container">
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Activo</th>
+                    <th>Compra/Venta</th>
+                    <th>Precio entrada</th>
+                    <th>Precio salida</th>
+                    <th>ROI%</th>
+                    <th>Diferencia precio</th>
+                    <th>Comision</th>
+                    <th>Ganado/Perdido</th>
+                    <th>Fecha de entrada</th>
+                    <th>Fecha de salida</th>
+                </tr>
+            </thead >
+    
+            <tbody>
+                <tr>
+                    <td>
+                        <select name="" id="">
+                            <option value="">ETH/USDT</option>
+                            <option value="">BTC/USDT</option>
+                            <option value="">GBP/USD</option>
+                            <option value="">USD/CAD</option>
+                            <option value="">EUR/USD</option>
+                            <option value="">USD/JPY</option>
+                            <option value="">USD/CHF</option>
+                            <option value="">AUD/USD</option>
+                            <option value="">NZD/USD</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">SHORT</option>
+                            <option value="">LONG</option>
+                        </select>
+                    </td>
+                    <td>
+                        <textarea name="" id="" rows="1" placeholder="precio de entrada"></textarea>
+                    </td>
+                    <td>
+                        <textarea name="" id="" rows="1" placeholder="precio de salida"></textarea>
+                    </td>
+                    <td>
+                        <textarea name="" id="" rows="1" placeholder="ROI%"></textarea>
+                    </td>
+                    <td>datos</td>
+                    <td>datos</td>
+                    <td>datos</td>
+                    <td>
+                        <textarea name="" id="" rows="1" placeholder="fecha de entrada"></textarea>
+                    </td>
+                    <td>
+                        <textarea name="" id="" rows="1" placeholder="fecha de salida"></textarea>
+                    </td>
+                </tr>
+
+                <tr class="row-button">
+                    <td class="col-button" colspan="10">
+                        <button class="add-row-button">+</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+    <script src="table.js"></script>
+</body>
+</html>

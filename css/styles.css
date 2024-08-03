@@ -1,0 +1,103 @@
+/********** RESET **********/
+a {
+    text-decoration: none;
+    
+}
+
+li {
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* RAIZ */ 
+:root{
+    --first-font: "Roboto", sans-serif;;
+    --second-font: "Nunito", sans-serif; 
+    --first-color: #c15e1b;
+    --second-color: #995a49;
+    --third-color: #fd0000;
+    --fourth-color: #51ff00;
+    --white-color: #ffffff;
+    --black-color: #000000;
+}
+
+/* FUENTE DE TEXTO Y FONDO*/
+body {
+    font-family: var(--first-font);
+    background-color: var(--white-color);
+}
+    
+h1, h2, h3, h4{
+    font-family: var(--second-font);
+    line-height: 1.5;
+}
+
+/* COLOR DE TEXTO*/
+h1, h2 {
+    color: var(--first-color);
+}
+h3 {
+    color: var(--third-color);
+}
+b {
+    color: var(--fourth-color);
+}
+mark {
+    background-color: var(--fourth-color);
+}
+
+/* TABLAS  */
+.main-table-container{
+    margin: 5%;
+}
+
+.main-table{
+    width: 100%;
+}
+
+table, tr, th{
+    border: 1px solid;
+    color: var(--black-color);
+    border-collapse: collapse;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    font-family: var(--first-font);
+    padding: 8px;
+}
+
+td{
+    font-family: var(--second-font);
+    padding: 4px;
+    border: 1px solid black;
+}
+
+select{
+    font-family: var(--second-font);
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+}
+
+
+.add-row-button{
+    width: 1.8rem;
+    height: 1.8rem;
+    color: var(--black-color);
+    background-color: var(--fourth-color);
+}
+
