@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,73 +19,83 @@
     <!--tabla principal-->
     <div class="main-table-container">
         <table>
-
             <thead>
                 <tr>
                     <th>Activo</th>
                     <th>Compra/Venta</th>
+                    <th>Inversion</th>
                     <th>Precio entrada</th>
                     <th>Precio salida</th>
                     <th>ROI%</th>
-                    <th>Diferencia precio</th>
+                    <th>Ganancia/Perdida</th>
                     <th>Comision</th>
-                    <th>Ganado/Perdido</th>
                     <th>Fecha de entrada</th>
                     <th>Fecha de salida</th>
                 </tr>
-            </thead >
+            </thead>
     
             <tbody>
                 <tr>
                     <td>
-                        <select name="" id="">
-                            <option value="">ETH/USDT</option>
-                            <option value="">BTC/USDT</option>
-                            <option value="">GBP/USD</option>
-                            <option value="">USD/CAD</option>
-                            <option value="">EUR/USD</option>
-                            <option value="">USD/JPY</option>
-                            <option value="">USD/CHF</option>
-                            <option value="">AUD/USD</option>
-                            <option value="">NZD/USD</option>
+                        <select id="activo">
+                            <option value="ETH/USDT">ETH/USDT</option>
+                            <option value="BTC/USDT">BTC/USDT</option>
+                            <option value="GBP/USD">GBP/USD</option>
+                            <option value="USD/CAD">USD/CAD</option>
+                            <option value="EUR/USD">EUR/USD</option>
+                            <option value="USD/JPY">USD/JPY</option>
+                            <option value="USD/CHF">USD/CHF</option>
+                            <option value="AUD/USD">AUD/USD</option>
+                            <option value="NZD/USD">NZD/USD</option>
                         </select>
                     </td>
                     <td>
-                        <select name="" id="">
-                            <option value="">SHORT</option>
-                            <option value="">LONG</option>
+                        <select id="compra-venta" class="short-long-select" oninput="calcularRoi()">
+                            <option value="SHORT" id="short" class="short">SHORT</option>
+                            <option value="LONG" id="long" class="long">LONG</option>
                         </select>
                     </td>
                     <td>
-                        <textarea name="" id="" rows="1" placeholder="precio de entrada"></textarea>
+                        <input type="number" id="inversion" class="inversion" step="0.001" oninput="calcularRoi()">
                     </td>
                     <td>
-                        <textarea name="" id="" rows="1" placeholder="precio de salida"></textarea>
+                        <input type="number" id="precioEntrada" class="precio-entrada" step="0.001" oninput="calcularRoi()">     <!--oninput(se ejecuta calcular cuando presiones una tecla en el input)-->
                     </td>
                     <td>
-                        <textarea name="" id="" rows="1" placeholder="ROI%"></textarea>
-                    </td>
-                    <td>datos</td>
-                    <td>datos</td>
-                    <td>datos</td>
-                    <td>
-                        <textarea name="" id="" rows="1" placeholder="fecha de entrada"></textarea>
+                        <input type="number" id="precioSalida" class="precio-salida" step="0.001" oninput="calcularRoi()">
                     </td>
                     <td>
-                        <textarea name="" id="" rows="1" placeholder="fecha de salida"></textarea>
+                        <input type="text" id="roi" class="roi" step="0.001" readonly> <!--readonly el usuario no puede modificar el texto-->
+                    </td>
+                    <td>
+                        <input type="number" id="ganancia-perdida" class="ganancia-perdida" step="0.001" readonly>
+                    </td>
+                    <td>
+                        <input type="number" id="comision" class="comision" step="0.001">
+                    </td>
+                    <td>
+                        <input type="date">
+                    </td>
+                    <td>
+                        <input type="date">
+                    </td>
+                    <td>
+                        <button onclick="eliminarFila(this)" class="delete-row-button">Eliminar</button>
                     </td>
                 </tr>
 
                 <tr class="row-button">
                     <td class="col-button" colspan="10">
-                        <button class="add-row-button">+</button>
+                        <button onclick="agregarFila()" class="add-row-button">+</button>
                     </td>
                 </tr>
+
             </tbody>
         </table>
     </div>
-    
 
-    <script src="table.js"></script>
+    
+    
+    <script src="/javascript/table.js"></script>
 </body>
 </html>
