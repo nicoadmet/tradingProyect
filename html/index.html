@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="/css/styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,8 +37,8 @@
     
             <tbody>
                 <tr>
-                    <td>
-                        <select id="activo">
+                    <td class="celda-activo">
+                        <select id="activo" class="activo">
                             <option value="ETH/USDT">ETH/USDT</option>
                             <option value="BTC/USDT">BTC/USDT</option>
                             <option value="GBP/USD">GBP/USD</option>
@@ -49,35 +50,41 @@
                             <option value="NZD/USD">NZD/USD</option>
                         </select>
                     </td>
-                    <td>
+                    <td class="celda-compra-venta">
                         <select id="compra-venta" class="short-long-select">
+                            <option disabled selected>Compra/Venta</option>
                             <option value="SHORT" id="short" class="short">SHORT</option>
                             <option value="LONG" id="long" class="long">LONG</option>
                         </select>
                     </td>
-                    <td>
-                        <input type="number" id="inversion" class="inversion" step="0.001" oninput="calcularRoi()">
+                    <td class="celda-inversion">
+                            <!-- <span style= "color: white;">$</span> -->
+                            <input type="number" id="inversion" class="inversion" step="0.001" oninput="calcularRoi()">
                     </td>
-                    <td>
+                    <td class="celda-entrada-salida">
+                        <!-- <span style= "color: 
+                        black;">$</span> -->
                         <input type="number" id="precioEntrada" class="precio-entrada" step="0.001" oninput="calcularRoi()">     <!--oninput(se ejecuta calcular cuando presiones una tecla en el input)-->
                     </td>
-                    <td>
+                    <td class="celda-entrada-salida">
+                        <!-- <span style= "color: black;">$</span> -->
                         <input type="number" id="precioSalida" class="precio-salida" step="0.001" oninput="calcularRoi()">
                     </td>
-                    <td>
+                    <td class="celda-roi">
                         <input type="text" id="roi" class="roi" step="0.001" readonly> <!--readonly el usuario no puede modificar el texto-->
                     </td>
-                    <td>
+                    <td class="celda-ganancia-perdida">
+                        <!-- <span style= "color: black;">$</span> -->
                         <input type="number" id="ganancia-perdida" class="ganancia-perdida" step="0.001" readonly>
                     </td>
-                    <td>
+                    <td class="celda-comision">
                         <input type="number" id="comision" class="comision" step="0.001">
                     </td>
-                    <td>
-                        <input type="date">
+                    <td class="celda-fechas">
+                        <input type="date" class="fecha">
                     </td>
-                    <td>
-                        <input type="date">
+                    <td class="celda-fechas">
+                        <input type="date" class="fecha">
                     </td>
                     <td>
                         <button onclick="eliminarFila(this)" class="delete-row-button">Eliminar</button>
@@ -86,7 +93,7 @@
 
                 <tr class="row-button">
                     <td class="col-button" colspan="10">
-                        <button onclick="agregarFila()" class="add-row-button">+</button>
+                        <button  class="add-row-button">+</button>
                     </td>
                 </tr>
 
@@ -99,5 +106,6 @@
     <script src="/javascript/calculos.js"></script>
     <script src="/javascript/select.js"></script>
     <script src="/javascript/filas.js"></script>
+    <script src="/javascript/signos.js"></script>
 </body>
 </html>
