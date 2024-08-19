@@ -61,6 +61,7 @@ function calcularRoi(fila) {
             inputGanancias.style.backgroundColor = "rgb(201, 64, 64)";
         }
 
+
     } catch (e) { // e = error
         console.error('Error en el calculo del ROI:', e);
     }

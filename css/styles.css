@@ -58,6 +58,7 @@ mark {
 
 .main-table-container{
     display: flex;
+    flex-direction: column;
     margin: 5%;
 }
 
@@ -104,8 +105,8 @@ input{
 /**** ACTIVO ****/
 .celda-activo{
     width: 100%;
+    min-width: 6rem;
     background-color: rgb(0, 51, 102);
-
 }
 
 .activo{
@@ -158,6 +159,9 @@ input{
     border: none;
 }
 
+.celda-inversion{
+    content: '$';
+}
 
 /**** PRECIO DE ENTRADA/SALIDA ****/
 .celda-entrada-salida{
@@ -220,6 +224,7 @@ input{
 
 
 /*BOTONES*/
+/*agregar fila*/
 .add-row-button{
     position: relative;
     text-decoration: none;
@@ -251,6 +256,24 @@ input{
     border-radius: 0%;
 }
 
+/*guardar datos*/
+.save-button {
+    background: rgb(70, 198, 45);
+    color: rgb(255, 255, 255);
+    height: 2rem;
+    width: 4.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.save-button:hover {
+    background: #337f33;
+}
+
+/*eliminar fila*/
 .delete-row-button{
     position: relative;
     text-decoration: none;
@@ -279,4 +302,9 @@ input{
 .delete-row-button:hover::before{
     top: 0;
     border-radius: 0%;
+}
+
+/*SAVE BUTTON CONTAINER*/
+.save-button-container{
+    padding: 0.5rem 0rem;
 }

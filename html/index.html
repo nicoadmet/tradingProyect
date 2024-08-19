@@ -58,12 +58,9 @@
                         </select>
                     </td>
                     <td class="celda-inversion">
-                            <!-- <span style= "color: white;">$</span> -->
                             <input type="number" id="inversion" class="inversion" step="0.001" oninput="calcularRoi()">
                     </td>
                     <td class="celda-entrada-salida">
-                        <!-- <span style= "color: 
-                        black;">$</span> -->
                         <input type="number" id="precioEntrada" class="precio-entrada" step="0.001" oninput="calcularRoi()">     <!--oninput(se ejecuta calcular cuando presiones una tecla en el input)-->
                     </td>
                     <td class="celda-entrada-salida">
@@ -86,6 +83,7 @@
                     <td class="celda-fechas">
                         <input type="date" class="fecha">
                     </td>
+                    
                     <td>
                         <button onclick="eliminarFila(this)" class="delete-row-button">Eliminar</button>
                     </td>
@@ -96,9 +94,14 @@
                         <button  class="add-row-button">+</button>
                     </td>
                 </tr>
-
+                
             </tbody>
         </table>
+
+        <div class="save-button-container">
+            <button class="save-button" onclick="guardarDatos(this)">Guardar</button>
+        </div>
+
     </div>
 
     
@@ -107,5 +110,6 @@
     <script src="/javascript/select.js"></script>
     <script src="/javascript/filas.js"></script>
     <script src="/javascript/signos.js"></script>
+    <script src="/javascript/guardado.js"></script>
 </body>
 </html>
